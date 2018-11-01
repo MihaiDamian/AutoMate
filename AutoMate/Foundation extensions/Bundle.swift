@@ -9,15 +9,8 @@
 import Foundation
 
 extension Bundle {
-
-    /// AutoMate Bundle Identifier
-    public static let autoMateIdentifier = "com.pgs-soft.AutoMate"
-
     /// AutoMate framework bundle
     public class var autoMate: Bundle {
-        guard let bundle = Bundle(identifier: autoMateIdentifier) else {
-            preconditionFailure("Cannot find allow button.")
-        }
-        return bundle
+        return Bundle(for: AppUITestCase.self)
     }
 }

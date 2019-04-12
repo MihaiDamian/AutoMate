@@ -70,9 +70,9 @@ public extension XCUIElement {
             }
         } else {
             var previousValueLength = 0
-            while self.text.characters.count != previousValueLength {
+            while self.text.count != previousValueLength {
                 // Keep removing characters until text is empty, or removing them is not allowed.
-                previousValueLength = self.text.characters.count
+                previousValueLength = self.text.count
                 typeText("\u{8}")
             }
         }
